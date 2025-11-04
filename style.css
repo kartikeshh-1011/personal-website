@@ -1,0 +1,90 @@
+/* style.css — Modern gradient theme, shared across pages.
+   Edit colors and spacing here to change the whole site. */
+
+:root{
+  --bg:#0f1724;            /* deep background fallback */
+  --card:#0f1724;          /* not used directly; gradient used */
+  --accent1:#6dd3f9;
+  --accent2:#7f53ac;
+  --muted: #9aa4b2;
+  --surface: rgba(255,255,255,0.04);
+  --glass: rgba(255,255,255,0.03);
+  --radius: 12px;
+  --container: 1100px;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:linear-gradient(180deg,#071226 0%, #0b2b3b 100%);color:#e6eef6}
+.container{max-width:var(--container);margin:0 auto;padding:22px}
+
+/* Header */
+.site-header{backdrop-filter: blur(6px);position:sticky;top:0;z-index:30;padding:8px 0}
+.header-inner{display:flex;align-items:center;gap:16px;justify-content:space-between}
+.brand{font-weight:700;color:#fff;text-decoration:none;font-size:1.05rem}
+.nav{display:flex;gap:12px;align-items:center}
+.nav-link{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:500}
+.nav-link:hover{color:#fff;background:var(--glass)}
+.nav-link.active{color:#fff;background:linear-gradient(90deg,var(--accent1),var(--accent2));box-shadow:0 6px 18px rgba(127,83,172,0.12)}
+
+/* Mobile menu toggle */
+.menu-toggle{display:none;background:transparent;border:0;color:#fff;font-size:1.25rem;padding:8px}
+
+/* Hero */
+.hero{padding:36px 0}
+.hero-card{display:flex;gap:28px;align-items:center;background:linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));padding:22px;border-radius:14px;box-shadow:0 8px 30px rgba(7,18,38,0.6)}
+.hero-left{flex:0 0 170px}
+.profile-img{width:170px;height:170px;object-fit:cover;border-radius:16px;border:3px solid rgba(255,255,255,0.06)}
+.hero-right{flex:1}
+.hero-right h1{margin:0;font-size:1.75rem}
+.accent{background:linear-gradient(90deg,var(--accent1),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800}
+.sub{color:var(--muted);margin:6px 0 12px}
+.objective{color:#dfeaf6;line-height:1.5}
+
+/* Buttons */
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#041027;text-decoration:none;font-weight:600;margin-right:8px;border:0;cursor:pointer}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff}
+
+/* Info tiles */
+.info-tiles{display:flex;gap:16px;margin-top:18px}
+.tile{flex:1;background:var(--glass);padding:16px;border-radius:12px}
+.tile h3{margin:0 0 8px;font-size:1.05rem}
+
+/* Pages */
+.page{padding:36px 0}
+.education-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
+.edu-table{width:100%;border-collapse:collapse;color:#cfe7ff}
+.edu-table th, .edu-table td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.03)}
+.edu-table thead th{color:#fff;background:linear-gradient(90deg,var(--accent2),var(--accent1));font-weight:600;border-bottom:2px solid rgba(255,255,255,0.06);}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.skill-card{background:var(--surface);padding:14px;border-radius:12px}
+.skill-card h4{margin:0 0 8px}
+
+/* Personal */
+.personal-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-card{background:var(--glass);padding:16px;border-radius:12px}
+.form-card input, .form-card textarea{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#e6eef6}
+
+/* Footer */
+.site-footer{padding:18px 0;border-top:1px solid rgba(255,255,255,0.02);margin-top:28px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+
+/* Notes & small */
+.note{margin-top:12px;color:var(--muted);font-size:0.93rem}
+
+/* Responsive */
+@media (max-width:880px){
+  .hero-card{flex-direction:column;align-items:center;text-align:center}
+  .hero-left{order:0}
+  .hero-right{order:1}
+  .nav{display:none}
+  .menu-toggle{display:block}
+  .info-tiles{flex-direction:column}
+  .personal-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}

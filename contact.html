@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Kartikesh Vispute</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Kartikesh Vispute</a>
+      <nav id="main-nav" class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="education.html" class="nav-link">Education</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="personal.html" class="nav-link">Personal</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+      <button id="menu-toggle-contact" class="menu-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container page contact-page">
+    <h2>Contact Me</h2>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h4>Reach out directly</h4>
+        <p><strong>Phone:</strong> <a href="tel:+918623057575">+91 8623057575</a></p>
+        <p><strong>Email:</strong> <a href="mailto:ketanvispute1011@gmail.com">ketanvispute1011@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kartikesh-vispute-b63b4326b" target="_blank">Kartikesh Vispute</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/vispute_ketan_10?igsh=MXRpbWZxc3ZoanAydg==" target="_blank">@vispute_ketan_10</a></p>
+      </div>
+
+      <div class="contact-card form-card">
+        <h4>Send a quick message</h4>
+        <!-- Simple non-server form (opens email client). If you later add a backend, replace action. -->
+        <form action="mailto:ketanvispute1011@gmail.com" method="post" enctype="text/plain">
+          <label for="name">Your name</label>
+          <input id="name" name="Name" type="text" placeholder="Your name" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" rows="5" placeholder="Write a short message" required></textarea>
+
+          <button type="submit" class="btn">Send</button>
+        </form>
+        <p class="note">This form uses your email client (no backend). For a working website form, you'll need a server or a 3rd-party form service.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year-contact"></span> Kartikesh Vijay Vispute</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
